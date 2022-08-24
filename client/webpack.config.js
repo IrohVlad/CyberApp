@@ -17,7 +17,8 @@ export default {
         new CleanWebpackPlugin()
     ],
     devServer: {
-        port: 3000
+        port: 3000,
+        historyApiFallback: true,
     },
     module: {
         
@@ -47,6 +48,13 @@ export default {
                 exclude: /node_modules/,
             },
             {
+                test: /\.(png|jpg|jpeg|svg)$/,
+                use: [
+                  // Creates `style` nodes from JS strings
+                  "file-loader"
+                ]
+            },
+            {
                 test: /\.m?jsx$/,
                 exclude: /node_modules/,
                 use: {
@@ -55,7 +63,7 @@ export default {
                     presets: ['@babel/preset-env', "@babel/preset-react"]
                   }
                 }
-              }
+            }
         ]
     }
 }
