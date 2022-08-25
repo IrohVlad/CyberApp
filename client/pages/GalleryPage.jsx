@@ -94,9 +94,9 @@ const GalleryPage = () => {
                 {/* <GallaryGridContainer Children={<GalleryGridItem func={setSliderCounter} items={galleryItems}></GalleryGridItem>}>
                     
                 </GallaryGridContainer> */}
-                {(docWidth == 'max' && <GalleryGrid columns={6} imgArr={galleryItems}/>) || 
-                (docWidth == 'mid' && <GalleryGrid columns={4} imgArr={galleryItems}/>) || 
-                (docWidth == 'min' && <GalleryGrid columns={2} imgArr={galleryItems}/>)}
+                {(docWidth == 'max' && <GalleryGrid func={setSliderCounter} columns={6} imgArr={galleryItems}/>) || 
+                (docWidth == 'mid' && <GalleryGrid func={setSliderCounter} columns={4} imgArr={galleryItems}/>) || 
+                (docWidth == 'min' && <GalleryGrid func={setSliderCounter} columns={2} imgArr={galleryItems}/>)}
             </section>
             
         </main>
