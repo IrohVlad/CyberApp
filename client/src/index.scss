@@ -671,6 +671,91 @@ footer{
     //     }
     // }
 }
+/*-----------------------------------------form section------------------------------------------------------------*/
+.form__section{
+
+    width: 100%;
+    padding: 20px;
+    color: #FF2E00;
+    min-height: 100vh;
+    max-height: fit-content;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    .form__title{
+        font-size: 25px;
+    }
+    form{
+        margin-top: 20px;
+        div:not(:last-child){
+            margin-bottom: 20px;
+        }
+        .text-input{
+            position: relative;
+            input{
+                padding: 10px;
+                height: 30px;
+                width: 300px;
+                background-color:inherit;
+                border: 2px solid #FF2E00;
+                border-radius: 10px;
+                color: white;
+                &:focus ~ span, :valid ~ span{
+                    
+                    transform: translateX(120px) translateY(-20px);
+                    background-color:#0C0C0C;
+                }
+                &:valid ~ span{
+                    transform: translateX(120px) translateY(-20px);
+                    background-color:#0C0C0C;
+                }
+            }
+            textarea{
+                overflow: hidden;
+                min-height: 100px;
+
+                width: 300px;
+                padding: 10px;
+                background-color:inherit;
+                border: 2px solid #FF2E00;
+                color: white;
+                border-radius: 10px;
+                &:focus ~ span, :valid ~ span{
+                    
+                    transform: translateX(120px) translateY(-20px);
+                    background-color:#0C0C0C;
+                }
+                &:valid ~ span{
+                    transform: translateX(120px) translateY(-20px);
+                    background-color:#0C0C0C;
+                }
+            }
+            span{
+                transition-property: transform, background-color;
+                transition-duration: 500ms, 300ms;
+                padding: 10px;
+                position: absolute;
+                left: 0;
+                pointer-events: none;
+            }
+        }
+        .button-input{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            button{
+                width: 100%;
+                padding: 10px;
+                height: 50px;
+                background-color:inherit;
+                border: 2px solid #FF2E00;
+                border-radius: 10px;
+                color: #FF2E00;
+            }
+        }
+    }
+}
 /*-----------------------------------------media------------------------------------------------------------*/
 @media(max-width: 970px){
     .first-section{

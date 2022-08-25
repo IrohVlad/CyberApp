@@ -4,6 +4,7 @@ import NavItem from '../src/components/NavItem.jsx';
 import {useLocation} from 'react-router-dom';
 import GallaryGridContainer from '../src/components/GallaryGridContainer.jsx';
 import GalleryGridItem from '../src/components/GalleryGridItem.jsx';
+import GalleryGrid from '../src/components/GalleryGrid.jsx';
 
 
 const GalleryPage = () => {
@@ -12,25 +13,44 @@ const GalleryPage = () => {
     const [galleryPage, setGalleryPage] = useState(false);
     const id = new URLSearchParams(useLocation().search).get("id");
     const [sliderCounter, setSliderCounter] = useState(0)
-    const [galleryTitle, setGalleryTitle] = useState('');
+    const [docWidth, setDocWidth] = useState('');
 
     
     
     useEffect(()=>{
         fetchItems(setNavItems);
-        setGalleryTitle(galleryItems[0]);
+        if (document.documentElement.clientWidth >= 1000){
+            setDocWidth('max');
+        }
+        else if(document.documentElement.clientWidth < 1000 && document.documentElement.clientWidth > 500){
+            setDocWidth('mid');
+        }
+        else if(document.documentElement.clientWidth <= 500){
+            setDocWidth('min');
+        }
     }, [])
     useEffect(()=>{
         setGalleryPage(false);
         setSliderCounter(0);
         fetchGallery(setGalleryItems, id);
     }, [galleryPage])
+    window.addEventListener('resize', ()=>{ //переразмещение при масштабировании страницы
+        if (document.documentElement.clientWidth >= 1000){
+            setDocWidth('max');
+        }
+        else if(document.documentElement.clientWidth < 1000 && document.documentElement.clientWidth > 500){
+            setDocWidth('mid');
+        }
+        else if(document.documentElement.clientWidth <= 500){
+            setDocWidth('min');
+        }
+    });
     
     return (
         
         <main>
             <section className="galary__section">
-                <div className='gallery-title'>{galleryTitle}</div>
+                <div className='gallery-title'></div>
                 <div className="galary__slider">
                     <div className="vectors">
                         <img onClick={()=> {
@@ -71,9 +91,12 @@ const GalleryPage = () => {
             </section>
 
             <section id="galary" className="gallary__grid _container">
-                <GallaryGridContainer Children={<GalleryGridItem func={setSliderCounter} items={galleryItems}></GalleryGridItem>}>
+                {/* <GallaryGridContainer Children={<GalleryGridItem func={setSliderCounter} items={galleryItems}></GalleryGridItem>}>
                     
-                </GallaryGridContainer>
+                </GallaryGridContainer> */}
+                {(docWidth == 'max' && <GalleryGrid columns={6} imgArr={galleryItems}/>) || 
+                (docWidth == 'mid' && <GalleryGrid columns={4} imgArr={galleryItems}/>) || 
+                (docWidth == 'min' && <GalleryGrid columns={2} imgArr={galleryItems}/>)}
             </section>
             
         </main>
