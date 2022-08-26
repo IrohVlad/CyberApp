@@ -21,7 +21,10 @@ const GalleryGrid = ({columns, imgArr, func}) => {
         if(id == col.length){
             id = 0;
         }
-        col[id].push(<div key={item.id} onClick={()=>func(i)} className='grid-item'><img key={item.id} className='grid-img' src={item.img} /></div>)
+        col[id].push(<div key={item.id} style={{
+            height: `${80/columns}vw`,
+            backgroundColor: 'black'
+        }} onClick={()=>func(i)} className='grid-item'><img key={item.id} className='grid-img' src={item.img} /></div>)
         id++;
     })
     let colms = [];

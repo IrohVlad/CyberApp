@@ -5,7 +5,7 @@ const ContactPage = () => {
         <main>
             <section className="form__section _container">
                 <div className="form__title">CONTACT FORM</div>
-                <form action="URL">
+                <form action="">
                     <div className="text-input">
                         <input type="text" required="required" name="name"/>
                         <span>NAME</span>

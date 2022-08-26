@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { fetchItems, fetchGallery } from '../fethes.jsx';
 import NavItem from '../src/components/NavItem.jsx';
 import {useLocation} from 'react-router-dom';
-import GallaryGridContainer from '../src/components/GallaryGridContainer.jsx';
-import GalleryGridItem from '../src/components/GalleryGridItem.jsx';
 import GalleryGrid from '../src/components/GalleryGrid.jsx';
 
 
@@ -50,7 +48,17 @@ const GalleryPage = () => {
         
         <main>
             <section className="galary__section">
-                <div className='gallery-title'></div>
+                {galleryItems.map((item, i)=> {
+                    if(i == sliderCounter){
+                        return <div className='gallary-title'>{item.name}</div>
+                    }
+                })}
+                {galleryItems.map((item, i)=> {
+                    if(i == sliderCounter){
+                        return <div className='gallary-disc'>{item.name}</div>
+                    }
+                })}
+                
                 <div className="galary__slider">
                     <div className="vectors">
                         <img onClick={()=> {
@@ -69,6 +77,13 @@ const GalleryPage = () => {
                         }} className="vector-2" src="http://localhost:7000/Vector.svg" alt=""/>
                     </div>
                     {galleryItems.map((item)=><div style={ {transform: `translateX(-${sliderCounter * 100}vw)`}} className='img'><img src={item.img} /></div>)}
+                </div>
+                <div className="galary__subimg">
+                    {/* {galleryItems.map((item, i)=> {
+                        if(i == sliderCounter){
+                            return {}
+                        }
+                    })} */}
                 </div>
                 <div className="main__sidebar sidebar">
                     <ul className="sidebar__nav">
