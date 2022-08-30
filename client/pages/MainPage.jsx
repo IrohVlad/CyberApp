@@ -45,7 +45,7 @@ const MainPage = () => {
                 </div>
             </section>
             <section class="second-section _container">
-                <div className="main__img"><img src="http://localhost:7000/iam.jpg" alt=""/></div>
+                <div className="main__img"><img src="http://62.113.105.113:7000/iam.jpg" alt=""/></div>
                 <div className="main_disc disc">
                     <div className="disc__title">DMITRY FILIPPOV</div>
                     <div className="disc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptatibus veritatis unde aliquam ad animi at, blanditiis perferendis perspiciatis id consequatur impedit quos amet optio reprehenderit explicabo reiciendis temporibus sed necessitatibus quisquam in quasi mollitia esse. Sit, hic! Tempora fugiat exercitationem quaerat consequatur ipsam quisquam iste adipisci illum laborum, voluptas corrupti animi sit nisi doloremque possimus. Quaerat et maxime veniam eos voluptatem incidunt? Sunt cum similique corrupti. Aut est placeat blanditiis, similique autem pariatur nostrum maxime perspiciatis doloremque vitae fugit, eveniet voluptatibus rem culpa quaerat accusantium aperiam repellendus ullam. Ipsam non explicabo vel, natus soluta vero? Unde, laudantium corporis! Accusantium quis beatae dolores, neque adipisci eius ea blanditiis dicta consequuntur delectus eos minima? Commodi natus magnam accusamus aut unde esse.</div>

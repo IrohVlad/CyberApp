@@ -67,14 +67,14 @@ const GalleryPage = () => {
                                 setSliderCounter(galleryItems.length - 1);
                             }
                             console.log(sliderCounter);
-                        }} className="vector-1" src="http://localhost:7000/Vector-1.svg" alt=""/>
+                        }} className="vector-1" src="http://62.113.105.113:7000/Vector-1.svg" alt=""/>
                         <img onClick={()=> {
                             setSliderCounter(sliderCounter + 1);
                             console.log(sliderCounter);
                             if (sliderCounter > galleryItems.length - 2){
                                 setSliderCounter(0);
                             }
-                        }} className="vector-2" src="http://localhost:7000/Vector.svg" alt=""/>
+                        }} className="vector-2" src="http://62.113.105.113:7000/Vector.svg" alt=""/>
                     </div>
                     {galleryItems.map((item)=><div style={ {transform: `translateX(-${sliderCounter * 100}vw)`}} className='img'><img src={item.img} /></div>)}
                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 export async function fetchItems(arr){
-    await fetch('http://localhost:7000/api/categories', {
+    await fetch('http://62.113.105.113:7000/api/categories', {
     method: 'GET',
     headers: {
         'Content-type': 'aplication/json'
@@ -11,7 +11,7 @@ export async function fetchItems(arr){
     });
 }
 export async function fetchGallery(func, id){
-    await fetch(`http://localhost:7000/api/category?id=${id}`, {
+    await fetch(`http://62.113.105.113:7000/api/category?id=${id}`, {
     method: 'GET',
     headers: {
         'Content-type': 'aplication/json'

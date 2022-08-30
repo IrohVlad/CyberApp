@@ -15,7 +15,7 @@ const Header = () => {
             <div className="header _container">
                 <div className="header__logo">
                     
-                    <img src="http://localhost:7000/cyber_logo_3low.png" alt=""/>
+                    <img src="http://62.113.105.113:7000/cyber_logo_3low.png" alt=""/>
                     
                 </div>
                 <div onClick={()=>{setBurger(!burgerActive)}} className={burgerActive ? "header__burger burger_active" : "header__burger"}>
