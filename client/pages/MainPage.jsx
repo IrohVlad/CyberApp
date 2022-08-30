@@ -35,7 +35,7 @@ const MainPage = () => {
                 </div>
                 <div className="main__slider">
 
-                    <video  src="http://localhost:7000/Dmitriy_Filippov_portfolio_2022.mp4" type="video/mp4" autoPlay muted loop></video>
+                    <video  src="http://62.113.105.113:7000/Dmitriy_Filippov_portfolio_2022.mp4" type="video/mp4" autoPlay muted loop></video>
                     <div className="gradient"></div>
                     <div className="slider__item">
                         <div className="slider__title">Dmitriy Filippov portfolio 2022</div>
