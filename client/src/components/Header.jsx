@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import HeaderNav from './HeaderNav.jsx';
 import { fetchItems } from '../../fethes.jsx';
 import NavItem from './NavItem.jsx';
@@ -7,6 +7,7 @@ import NavItem from './NavItem.jsx';
 const Header = () => {
     const [burgerActive, setBurger] = useState(false); 
     const [navItems, setNavItems] = useState([]);
+    const location = useLocation();
     useEffect(()=>{
         fetchItems(setNavItems);
     }, [])
@@ -27,6 +28,7 @@ const Header = () => {
                         </div>
                         <ul className="burger__content header__burger_content">
                             <HeaderNav/>
+                            {location.pathname == '/' ? <NavItem items={navItems}/> : ''}
                         </ul>
                     </div>
                 </div>
