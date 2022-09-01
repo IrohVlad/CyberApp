@@ -28,7 +28,7 @@ const Header = () => {
                         </div>
                         <ul className="burger__content header__burger_content">
                             <HeaderNav/>
-                            {location.pathname == '/' ? <><hr width='100%' color='white'/><NavItem items={navItems}/></> : ''}
+                            {location.pathname == '/' ? <><hr height='1px' width='100%' color='white'/><NavItem items={navItems}/></> : ''}
                         </ul>
                     </div>
                 </div>
