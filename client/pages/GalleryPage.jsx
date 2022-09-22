@@ -87,7 +87,7 @@ const GalleryPage = () => {
                 </div>
                 <div className="main__sidebar sidebar">
                     <ul className="sidebar__nav">
-                        {<NavItem items={navItems} func={setGalleryPage} />}
+                        {<NavItem id={id} items={navItems} func={setGalleryPage} />}
                     </ul>
                     <div className="slider__burger">
                         <div className="burger">
@@ -97,7 +97,7 @@ const GalleryPage = () => {
                                 <div className="burger__line line-3"></div>
                             </div>
                             <ul className="burger__content">
-                                {<NavItem items={navItems} />}
+                                {<NavItem id={id} items={navItems} />}
                             </ul>
                         </div>
                     </div>

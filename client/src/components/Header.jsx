@@ -27,13 +27,13 @@ const Header = () => {
                             <div className="burger__line line-3"></div>
                         </div>
                         <ul className="burger__content header__burger_content">
-                            <HeaderNav/>
+                            <HeaderNav loc={location.pathname} />
                             {location.pathname == '/' ? <><hr height='1px' width='100%' color='white'/><NavItem items={navItems}/></> : ''}
                         </ul>
                     </div>
                 </div>
                 <ul className="header__nav">
-                    <HeaderNav/>
+                    <HeaderNav loc={location.pathname}/>
                 </ul>
             </div>
         </header>

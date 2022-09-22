@@ -275,6 +275,12 @@ body{
         color: #FF2E00;
     }
 }
+._btn-lock{
+    pointer-events: none;
+    color: #FF2E00;
+    transition: all;
+    transition-duration: 0.5s;
+}
 
 /*-----------------------------------------header------------------------------------------------------------*/
 header{

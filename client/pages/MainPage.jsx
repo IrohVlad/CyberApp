@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { fetchItems } from '../fethes.jsx';
 import NavItem from '../src/components/NavItem.jsx';
 
@@ -8,6 +9,7 @@ const MainPage = () => {
     
     useEffect(()=>{
         fetchItems(setNavItems);
+        console.log(location);
     }, [])
     return (
         <main>
